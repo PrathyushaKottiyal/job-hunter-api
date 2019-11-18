@@ -8,8 +8,8 @@ PROJECT_GIT_URL='https://github.com/PrathyushaKottiyal/job-hunter-api.git'
 PROJECT_BASE_PATH='/usr/local/apps/job-hunter'
 
 echo "Installing dependencies..."
-brew update
-brew install -y python3-dev python3-venv sqlite python-pip supervisor nginx git
+npm update
+npm install -y python3-dev python3-venv sqlite python-pip supervisor nginx git
 
 # Create project directory
 mkdir -p $PROJECT_BASE_PATH
