@@ -5,7 +5,7 @@ set -e
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/PrathyushaKottiyal/job-hunter-api.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/job-hunter'
+PROJECT_BASE_PATH='/usr/local/apps/job-hunter-api'
 
 echo "Installing dependencies..."
 apt-get update
