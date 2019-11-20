@@ -36,10 +36,10 @@ sudo supervisorctl update;
 sudo supervisorctl restart jobhunter_api;
 
 # Configure nginx
-sudo cp $PROJECT_BASE_PATH/deploy/nginx_jobhunter_api.conf /etc/nginx/sites-available/jobhunter_api.conf;
+sudo cp /Users/prathyusha/Documents/job-hunter-api/deploy/nginx_jobhunter_api.conf /etc/nginx/sites-available/jobhunter_api.conf;
 sudo rm -rf /etc/nginx/sites-enabled/default;
-sudo rm -rf /etc/nginx/sites-available/jobhunter_api.conf;
-sudo rm -rf /etc/nginx/sites-enabled/jobhunter_api.conf;
+# sudo rm -rf /etc/nginx/sites-available/jobhunter_api.conf;
+# sudo rm -rf /etc/nginx/sites-enabled/jobhunter_api.conf;
 sudo ln -s /etc/nginx/sites-available/jobhunter_api.conf /etc/nginx/sites-enabled/jobhunter_api.conf;
 sudo systemctl restart nginx.service;
 
