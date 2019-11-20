@@ -21,6 +21,7 @@ sudo mkdir -p $PROJECT_BASE_PATH/env
 sudo python3 -m venv $PROJECT_BASE_PATH/env
 
 # Install python packages
+sudo -H $PROJECT_BASE_PATH/env/bin/pip install wheel
 sudo -H $PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.text
 sudo -H $PROJECT_BASE_PATH/env/bin/pip install uwsgi
 
