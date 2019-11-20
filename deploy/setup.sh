@@ -30,17 +30,17 @@ $PROJECT_BASE_PATH/env/bin/python manage.py migrate
 $PROJECT_BASE_PATH/env/bin/python manage.py collectstatic --noinput
 
 # Configure supervisor
-cp $PROJECT_BASE_PATH/deploy/supervisor_jobhunter_api.conf /etc/supervisor/conf.d/jobhunter_api.conf
-supervisorctl reread
-supervisorctl update
-supervisorctl restart jobhunter_api
+cp $PROJECT_BASE_PATH/deploy/supervisor_jobhunter_api.conf /etc/supervisor/conf.d/jobhunter_api.conf;
+supervisorctl reread;
+supervisorctl update;
+supervisorctl restart jobhunter_api;
 
 # Configure nginx
-cp $PROJECT_BASE_PATH/deploy/nginx_jobhunter_api.conf /etc/nginx/sites-available/jobhunter_api.conf
-rm -rf /etc/nginx/sites-enabled/default
-rm -rf /etc/nginx/sites-available/jobhunter_api.conf
-rm -rf /etc/nginx/sites-enabled/jobhunter_api.conf
-ln -s /etc/nginx/sites-available/jobhunter_api.conf /etc/nginx/sites-enabled/jobhunter_api.conf
-systemctl restart nginx.service
+cp $PROJECT_BASE_PATH/deploy/nginx_jobhunter_api.conf /etc/nginx/sites-available/jobhunter_api.conf;
+rm -rf /etc/nginx/sites-enabled/default;
+rm -rf /etc/nginx/sites-available/jobhunter_api.conf;
+rm -rf /etc/nginx/sites-enabled/jobhunter_api.conf;
+ln -s /etc/nginx/sites-available/jobhunter_api.conf /etc/nginx/sites-enabled/jobhunter_api.conf;
+systemctl restart nginx.service;
 
 echo "DONE! :)"
