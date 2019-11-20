@@ -41,6 +41,6 @@ sudo rm -rf /etc/nginx/sites-enabled/default;
 sudo rm -rf /etc/nginx/sites-available/jobhunter_api.conf;
 sudo rm -rf /etc/nginx/sites-enabled/jobhunter_api.conf;
 sudo ln -s /etc/nginx/sites-available/jobhunter_api.conf /etc/nginx/sites-enabled/jobhunter_api.conf;
-systemctl restart nginx.service;
+sudo systemctl restart nginx.service;
 
 echo "DONE! :)"
